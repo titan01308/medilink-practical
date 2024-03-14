@@ -4,7 +4,11 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## To run the program
 
-In the project directory, you can run:
+In the project directory:
+
+### `npm install`
+
+After the installation of some libraries, you can run it by:
 
 ### `npm start`
 
