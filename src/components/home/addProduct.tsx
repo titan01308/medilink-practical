@@ -1,7 +1,7 @@
 import axios, { AxiosResponse } from 'axios';
 import { Product } from './Home';
 
-const addProduct = async (newProduct: Product): Promise<Product> => {
+const addProduct = async (newProduct: Product): Promise<Product | null> => {
   try {
     const response: AxiosResponse<Product> = await axios.post<Product>('https://dummyjson.com/products/add', {
       newProduct
@@ -9,11 +9,12 @@ const addProduct = async (newProduct: Product): Promise<Product> => {
 
     const productResponse = response;
 
-    console.log(productResponse,'asdasds')
 
-
-    return productResponse.data;
-
+    if(productResponse.status === 200 && productResponse.data) {
+      return productResponse.data;
+    } 
+    
+    return null;
   } catch (error) {
     console.error('Error:', error);
     throw error;

@@ -90,9 +90,12 @@ const Home: React.FC<Props> = ({ user }) => {
     try {
       const productResult = await addProduct(newProduct);
 
-      console.log(productResult,'asdas')
+      if(productResult) {
+        setProducts([...products, newProduct]);
+      } else {
+        setError('Encountered error, try again later!');  
+      }
       
-      setProducts([...products, newProduct]);
     } catch (error) {
       setError('Encountered error, try again later!');
       console.error('Error:', error);
