@@ -1,46 +1,54 @@
-# Getting Started with Create React App
+# This project is for Medilink practical exam purposes
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## To run the program
 
 In the project directory, you can run:
 
 ### `npm start`
 
 Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser and you will be redirected to login as the frontpage of the app.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Login
 
-### `npm test`
+for testing you can use the following credentials from dummyjson.com `https://dummyjson.com/users`
+sample test users
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+`username: atuny0`
+`password: 9uQFF1Lh`
+`gender: male`
 
-### `npm run build`
+`username: dpettegre6`
+`password: YVmhktgYVS`
+`gender: female`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Please note that I used the gender as roles as dummyjson.com does not have role in its user.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+`viewer - female`
+`editor - male`
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I also temporarily disabled the validation for password requiring 1 special character (dummyjson passwords uses only alphanumeric combinations)
 
-### `npm run eject`
+To enable it uncomment `line: 20 on Login.tsx`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Additional libraries used
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Axios, react-icon, sass
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Product 
 
-## Learn More
+for product I have used the data from `https://dummyjson.com/products`
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+I have used the endpoint for adding new product, unfortunately it will not be added to the server as limitation.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+That is why I proceed to just add it on the variable, but did a validation if the return is 200 and data is existing before executing.
+
+
+## Responsive Design
+
+You can check the responsive designs in browserstack or browsers built in device toolbar.
+
+The image used in the login page is from medilink webpage, i do not own it and used it solely for this purpose. 
