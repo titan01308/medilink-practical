@@ -1,0 +1,148 @@
+@use '../../styles/breakpoint/variables' as *;
+
+.homeContainer {
+  margin: 20px;
+  height: auto;
+  
+}
+
+.homeProductTableContainer {
+  display: flex;
+  flex-direction: column-reverse;
+  height: 100%;
+
+  @include breakpoint($lg) {
+    flex-direction: row;
+  }
+
+  .homeAddProduct {
+    display: flex;
+    flex-direction: column;
+
+    .homeAddProductButton {
+      width: fit-content;
+      padding: 15px 40px;
+      background-color: #00ADEE;
+      border: none;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 25px;
+  
+      &:hover {
+        background-color: #1678c2;
+      }
+  
+      &:disabled {
+        background-color: #BBDDEE;
+      }
+  }
+  }
+
+  .homeTableContainer {
+    flex: 2 1;
+    
+    table {
+      border-collapse: collapse;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      width: 100%;
+    }
+    
+    th {
+      padding: 15px;
+      background-color: rgba(255,255,255,0.2);
+      color: #fff;
+      text-align: left;
+      &:nth-child(1) {
+        min-width: 29px;
+      }
+      &:nth-child(3) {
+        min-width: 50px;
+      }
+    }
+    
+    td {
+      color: #000;
+    }
+    
+    thead {
+      th {
+        background-color: #55608f;
+      }
+    }
+    
+    tbody {
+      tr {
+        &:nth-child(even) {
+          
+          background-color: #e3e3e3;
+        }
+      }
+      td {
+        position: relative;
+      }
+    }
+  }
+
+  .homeProductSearch {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 20px;
+
+    label {
+      text-align: left;
+      margin-right: 10px;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+
+      @include breakpoint($md) {
+        max-width: 375px;
+      }
+    }
+  }
+}
+
+.homeProductControls {
+  max-width: 375px;
+  margin: 0 20px 50px;
+
+  .homeAddProductInputContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+
+    label {
+      font-size: 12px;
+      text-align: left;
+    }
+
+    input {
+      padding: 8px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+      width: 100%;
+    }
+
+    textarea {
+      height: 100px;
+      resize: none;
+    }
+
+    .errorMessage {
+      color: red;
+      font-size: 12px;
+      text-align: left;
+    }
+  }
+}
+
+
+

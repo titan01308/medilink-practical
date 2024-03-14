@@ -1,0 +1,9 @@
+@mixin breakpoint($minWidth) {
+  @media (min-width: $minWidth) {
+    @content;
+  }
+}
+
+$sm: 375px;
+$md: 768px;
+$lg: 1024px;
